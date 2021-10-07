@@ -3,5 +3,5 @@ using DDDClient.Abstractions;
 
 namespace DDDClient.DataModels
 {
-    internal record Dog(int Id, string Name, IList<IAnalysis> Analizes) : Patient(Id, Name, Analizes);
+    internal record Dog(int Id, string Name) : Patient(Id, Name);
 }

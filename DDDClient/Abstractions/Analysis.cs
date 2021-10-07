@@ -1,9 +1,9 @@
 ﻿namespace DDDClient.Abstractions
 {
-    internal abstract record Analysis(int Id, string Description, decimal Price, Patient Patient) : IAnalysis, IPayInfo
+    internal abstract record Analysis(int Id, string LaborType) : IAnalysis
     {
-        public string Description { get; set; } = Description;
+        public string Description { get; set; }
         public bool IsPaid { get; set; }
-        public decimal Price { get; set; } = Price;
+        public decimal Price { get; set; }
     }
 }

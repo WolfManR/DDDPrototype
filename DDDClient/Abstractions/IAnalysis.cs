@@ -2,6 +2,5 @@
 {
     internal interface IAnalysis : ILabor
     {
-        Patient Patient { get; }
     }
 }
