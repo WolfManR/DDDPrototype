@@ -1,8 +1,11 @@
-﻿namespace DDDClient.Abstractions
+﻿using System;
+
+namespace DDDClient.Abstractions
 {
     internal interface IPayInfo
     {
-        bool IsPaid { get; set; }
-        decimal Price { get; set; }
+        DateTime PaymentDate { get; }
+        bool IsPaid { get; }
+        decimal Price { get; }
     }
 }

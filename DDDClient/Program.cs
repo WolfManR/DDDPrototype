@@ -39,7 +39,8 @@ namespace DDDClient
             patient2.Analizes.Add(bloodAnalysis);
             patient2.Analizes.Add(GetCopy<InspectionAnalysis>(inspectionAnalysis));
 
-            inspectionAnalysis.IsPaid = true;
+            var (success, change) = inspectionAnalysis.Pay(10.44M);
+            Console.WriteLine($"Patient {patient1.Name} payment result {(success ? "completed" : "failed")}, payment change {change}");
 
             Console.WriteLine("State of Clinic1");
             foreach (var clinicPatient in clinic.Patients)
